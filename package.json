@@ -1,0 +1,19 @@
+{
+  "name": "bip_react",
+  "version": "1.0.0",
+  "description": "codigo curso",
+  "license": "MIT",
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "test": "lerna run test --parallel",
+    "start": "lerna run start --parallel"
+  },
+  "workspaces": [
+    "applications/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "private": true
+}

@@ -1,0 +1,56 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks'
+
+import Button from '../../components/Button';
+
+<Meta
+  title="Atoms/Button"
+  component={Button}
+/>
+
+export const Template = (args) => <Button {...args} />
+
+# Átomo Button
+
+## Default
+
+<Preview>
+  <Story
+    name="Button Info"
+    args={{ children: 'Default'}}
+  >
+    {Template.bind({})}
+  </Story>
+</Preview>
+
+## Props
+
+<Props story="Button Info" />
+
+## Variantes
+El atomo **Button** se podra ver de diferentes maneras dependiendo de las props que se le pase.
+###
+`classType`: **"primary"** **"secondary"** o **"link"** 
+
+<Preview>
+      <Button>Primary</Button>
+</Preview>
+
+`outline`:**(bool)** 
+
+<Preview>
+      <Button>Primary</Button>
+</Preview>
+
+## Import
+Para poder identificar mas fácil y rápido que componente es un átomo o una molécula, importamos todos los atomos de `@bapro/ui` 
+y accedemos a ellos **<Button....**  Ejemplo:
+
+```
+import { Button } from "@components/ui";
+
+<Button
+  ...
+>
+  continuar
+</Button>
+```

@@ -1,0 +1,53 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks'
+
+import Link from '../../components/Link';
+
+<Meta
+  title="Atoms/Link"
+  component={Link}
+/>
+
+export const Template = (args) => <Link {...args} />
+
+# Átomo Link
+
+## Default
+
+<Preview>
+  <Story
+    name="Link Info"
+    args={{ children: 'Default'}}
+  >
+    {Template.bind({})}
+  </Story>
+</Preview>
+
+## Props
+
+<Props story="Link Info" />
+
+## Variantes
+
+<Preview>
+      <Link>Primary</Link>
+</Preview>
+
+`outline`:**(bool)** 
+
+<Preview>
+      <Link>Primary</Link>
+</Preview>
+
+## Import
+Para poder identificar mas fácil y rápido que componente es un átomo o una molécula, importamos todos los atomos de `@bapro/ui` 
+y accedemos a ellos **<Link....**  Ejemplo:
+
+```
+import { Link } from "@components/ui";
+
+<Link
+  ...
+>
+  continuar
+</Link>
+```

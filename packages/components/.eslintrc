@@ -1,0 +1,74 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "airbnb",
+    "plugin:jsx-a11y/strict"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "**/*.stories.*"
+      ],
+      "rules": {
+        "import/no-anonymous-default-export": 0,
+        "react/jsx-props-no-spreading": 0,
+        "import/no-extraneous-dependencies": 0
+      }
+    }
+  ],
+  "env": {
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "ecmaFeatures": {
+      "legacyDecorators": true,
+      "jsx": true
+    }
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".scss"
+        ],
+        "paths": [
+          "./src"
+        ]
+      }
+    }
+  },
+  "rules": {
+    "react/jsx-filename-extension": 0,
+    "react/react-in-jsx-scope": 0,
+    "eol-last": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "object-curly-newline": 0,
+    "react/button-has-type": 0,
+    "comma-dangle": 0,
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "jsx-a11y/label-has-for": [
+      2,
+      {
+        "components": [
+          "Label"
+        ],
+        "required": {
+          "some": [
+            "nesting",
+            "id"
+          ]
+        },
+        "allowChildren": false
+      }
+    ]
+  }
+}

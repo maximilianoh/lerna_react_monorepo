@@ -1,0 +1,71 @@
+{
+  "name": "@components/ui",
+  "version": "1.0.0",
+  "description": "UI elements",
+  "author": "jfc",
+  "license": "MIT",
+  "repository": "jfc/ui",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "source": "src/index.js",
+  "engines": {
+    "node": ">=10"
+  },
+  "dependencies": {
+    "@craco/craco": "^6.1.1",
+    "classnames": "^2.3.1",
+    "date-fns": "^2.21.3",
+    "lint-staged": "^10.5.4",
+    "prop-types": "^15.7.2",
+    "react-bootstrap": "^1.6.1",
+    "react-datepicker": "^3.8.0",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "react-number-format": "^4.5.5",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0",
+    "rollup-plugin-includepaths": "^0.2.4"
+  },
+  "scripts": {
+    "build": "microbundle-crl --no-compress --format modern,cjs",
+    "start": "microbundle-crl watch --no-compress --format modern,cjs",
+    "prepare": "run-s build",
+    "test": "run-s test:unit test:lint test:build",
+    "test:build": "run-s build",
+    "test:lint": "eslint .",
+    "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
+    "test:watch": "react-scripts test --env=jsdom",
+    "precommit": "lint-staged",
+    "predeploy": "cd example && yarn install && yarn run build",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.2.2",
+    "@storybook/addon-essentials": "^6.2.2",
+    "@storybook/addon-links": "^6.2.2",
+    "@storybook/node-logger": "^6.2.2",
+    "@storybook/preset-create-react-app": "^3.1.7",
+    "@storybook/react": "^6.2.2",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^7.23.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "microbundle-crl": "^0.13.10",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "react-test-renderer": "^17.0.2"
+  },
+  "files": [
+    "dist"
+  ]
+}

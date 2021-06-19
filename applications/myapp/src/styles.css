@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  background-color: #ededed;
+}
+
+h2 {
+  color: #424242;
+  margin: 20px 0;
+  font-weight: 600;
+}
+
+h5, h4, h3 {
+  color: #424242;
+  margin: 0;
+}
+
+.root {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 15px;
+  min-height: 55vh;
+}
+
+.feedback-container span {
+  color: #2e2e2e;
+}
