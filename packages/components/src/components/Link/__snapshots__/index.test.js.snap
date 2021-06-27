@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button primary enabled 1`] = `
+<a
+  id={null}
+  onClick={null}
+>
+  <div
+    id="address_label"
+  >
+    Enter your address
+  </div>
+  <input
+    aria-labeledby="address_label"
+  />
+  soy un boton
+</a>
+`;
